@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>요리 게임</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="start">
+  <h1>요리 게임</h1>
+  <button onclick="startGame()">시작</button>
+</div>
+
+<div id="menu" class="hidden">
+  <h2>요리를 선택하세요</h2>
+  <button onclick="chooseDish('soup')">수프</button>
+</div>
+
+<div id="stage1" class="hidden">
+  <h2>재료를 선택하세요</h2>
+
+  <img src="images/meat.png" onclick="selectIngredient('meat')">
+  <img src="images/onion.png" onclick="selectIngredient('onion')">
+  <img src="images/carrot.png" onclick="selectIngredient('carrot')">
+
+</div>
+
+<div id="stage2" class="hidden">
+  <h2>요리 중!</h2>
+  <p>남은 시간: <span id="timer">10</span></p>
+  <p id="count">0 / 10</p>
+
+  <img id="pot" src="images/pot.png">
+  <br>
+  <button onclick="cook()">요리하기</button>
+</div>
+
+<div id="result" class="hidden">
+  <h2 id="resultText"></h2>
+  <button onclick="location.reload()">다시하기</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
